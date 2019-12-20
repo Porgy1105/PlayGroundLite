@@ -1,12 +1,60 @@
 <!DOCTYPE html>
 <html lang="ja">
-  <head>
-    <meta charset="utf-8">
-    <title>Title</title>
-    <script src="js/common.js" defer></script>
-    <link rel="stylesheet" href="css/style.css">
-  </head>
-  <body>
-    <p>Hello.</p>
-  </body>
+
+<head>
+	<title>Title</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+		integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="css/style.css" />
+</head>
+
+<body>
+	<section>
+		<h1>基本的な要素の取得</h1>
+		<pre class="prettyprint">
+            <code>
+				document.getElementById('parent'); //id名で取得
+				document.getElementsByClassName('parent'); // クラス名で取得
+				document.getElementsByTagName('div'); // タグ名で取得
+				document.querySelector('.parent'); // 最初にヒットした要素が取得される
+				document.querySelectorAll('.parent'); // ヒットした要素全部取得
+            </code>
+        </pre>
+		<div id="parent" class="parent">
+			<p>使い方</p>
+			<code>
+                document.getElementsByClassName("parent")[0].innerText;
+            </code>
+		</div>
+	</section>
+
+	<section>
+		<h1>取得した要素から子要素を取得</h1>
+		<code>
+        document.getElementsByClassName("parent")
+    </code>
+		<div class="parent">
+			<p>親divタグ</p>
+			<div class="child">
+				<p>子divタグ</p>
+			</div>
+		</div>
+	</section>
+
+	<script src="js/common.js" defer></script>
+	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+		integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+		crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+		integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+		crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+		integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+		crossorigin="anonymous"></script>
+	<script type="text/javascript"
+		src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+</body>
+
 </html>
