@@ -8,3 +8,12 @@ window.addEventListener("DOMContentLoaded", function () {
 		pres[i].firstChild.data = pres[i].firstChild.data.replace(/^\t+/gm, "");
 	}
 }, false);
+
+
+/* Materialize */
+document.addEventListener('DOMContentLoaded', function () {
+	var elems = document.querySelectorAll('.fixed-action-btn');
+	var instances = M.FloatingActionButton.init(elems, {
+		direction: 'left'
+	});
+});
